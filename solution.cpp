@@ -23,7 +23,7 @@ int removeDuplicates(vector<int>& nums){
 int main(int argc, char const *argv[])
 {
 
-    vector<int> nums = {};
+    vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
     int result = removeDuplicates(nums);
     cout << result << endl;
     

@@ -5,6 +5,6 @@ echo run program
 ./RUN
 
 echo remove exe
-RUN 
+rm RUN 
 
 echo scripts terminated
