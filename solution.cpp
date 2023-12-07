@@ -22,7 +22,11 @@ int removeElement(vector<int>& nums, int val){
 
 int main(int argc, char const *argv[])
 {
-    
+    vector<int> nums = {3,2,2,3};
+    int val = 3;
+
+    int result = removeElement(nums, val);
+    cout << result << endl;
     
     return 0;
 }
