@@ -45,12 +45,20 @@ int removeDuplicates(vector<int>& nums){
         }
         
     }
+
+    return i;
     
 }
 
 
 int main(int argc, char const *argv[])
 {
+
+    //nums = [1,1,1,2,2,3]
+    vector<int> nums = {1,1,1,2,2,3};
+    int result = removeDuplicates(nums);
+    cout << result << endl;
+    
 
     return 0;
 }
