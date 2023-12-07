@@ -12,7 +12,7 @@ int maxProfit(vector<int>& prices){
             maxProfit += (prices[i] - prices[i-1]);
         }
     }
-        return maxProfit;
+    return maxProfit;
     
 }
 
@@ -22,8 +22,9 @@ int main(int argc, char const *argv[])
 {
     // Input: prices = [7,1,5,3,6,4]
 
-    vector<int> prices = {1,2,3,4,5};
-    int result = max
+    vector<int>prices = {1,2,3,4,5};
+    int result = maxProfit(prices);
+    cout << result << endl;
     return 0;
 }
 
