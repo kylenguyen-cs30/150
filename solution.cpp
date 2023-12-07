@@ -34,6 +34,8 @@ int main(int argc, char const *argv[])
 
 
 /*
+on leetcode : 
+
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
