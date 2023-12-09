@@ -3,24 +3,24 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& numbers, int target) {
-    vector<int> result;
-    int check = 0;
+    int left = 0;
+    int right = numbers.size() - 1;
 
-    for (int i = 0; i < numbers.size(); i++)
+    while (left < right)       
     {
-        check = target - numbers[i];
-        for (int j = i+1; j < numbers.size(); j++)
-        {
-            if (numbers[j] == check) 
-            {
-                result.push_back(i+1);
-                result.push_back(j+1);
-            }
-            
-        }
+        int sum = numbers[left] + numbers[right];
         
+        if (sum == target)  
+        {
+            return {left+1, right+1}; // return it as array format
+        }else if (sum < target)
+        {
+            left++;
+        }else{
+            right--;
+        }
     }
-    return result;
+    return {};
     
 }
 
@@ -39,7 +39,17 @@ int main(int argc, char const *argv[])
     
     return 0;
 }
+/*
+- so this is one of the classic two pointer approach. the way of this 
+program works is having one pointer which point at the first index of 
+the vector and one pointer point at the end of the vector. both of these 
+pointers will slowly go to the middle of the vector so there will be 2 nested 
+loops in the vector. 
 
+- if the sum of both value at two pointers equal to the target number, program will 
+safely return it. otherwise, loop will increment left and right pointer correspondingly.
+
+*/
 
 /*
 - given 1-indexed array int is already sorted in ascending order.
