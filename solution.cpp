@@ -3,27 +3,9 @@
 using namespace std;
 
 vector<vector<int>> threeSum(vector<int>&nums){
-    //base case
-    bool is_zero = false;
-    if (nums.size() == 3)
-    {
-        for(int num: nums){
-            if (num == 0)
-            {
-                is_zero = true;
-            }
-            
-        }
-        if (is_zero)
-        {
-            return [];
-        }else{
-            return nums;
-        }
-        
-    }
 
-    //main case
+
+    
     
 }
 
@@ -60,7 +42,31 @@ int main(int argc, char const *argv[])
 
 pseudocode
 
+// base case : 
+
+vector<int> nums
+nums.sort()
+vector<vector<int>> triplets;
 
 
+for(int i = 0; i < nums.size() && nums[i] <= 0; ++i){
+    if nums[i] == nums[i-1] && i > 0:
+        continue
+
+    int left = i+1;
+    int right = nums.size() - 1;
+    while(left < right){
+        int sum nums[i] + nums[left] + nums[right]
+        
+        if sum == 0:
+            triplets.push_back({nums[i] , nums[left] , nums[right]})
+            left++
+            right--
+
+            // skip all duplicates
+            while(left < right && nums[left] == nums[left-1]) left++
+            while(left < right && nums[right] == nums[right+1]) right--
+    }
+}
 
 */
