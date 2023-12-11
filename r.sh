@@ -1,0 +1,12 @@
+ECHO STARTS
+
+ECHO COMPILE
+g++ solution.cpp -o RUN
+
+ECHO RUN
+./RUN
+
+ECHO REMOVE
+rm RUN
+
+ECHO TERMINATED
