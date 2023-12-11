@@ -1,15 +1,19 @@
 #include "iostream"
 #include "vector"
 #include "string"
+#include "algorithm"
 
 using namespace std;
 
 
 int lengthOfLongestSubstring(string s){
-    string temp = s;
-    sort(temp.begin(), temp.end());
-    cout<< temp << endl;
     
+    for (int i = 0; i < s.length(); i++)
+    {
+        string temp = s.substr(i,i);
+        cout << temp << endl;
+    }
+        
     return 0;
 
 }
@@ -23,6 +27,3 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-/*
-
-*/
