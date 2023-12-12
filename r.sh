@@ -1,7 +1,7 @@
 ECHO STARTS
 
 ECHO COMPILE
-g++ solution.cpp -o RUN
+g++ solution.cpp -o RUN -std=c++11
 
 ECHO RUN
 ./RUN
