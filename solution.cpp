@@ -8,13 +8,29 @@ using namespace std;
 
 int lengthOfLongestSubstring(string s){
     
-    for (int i = 0; i < s.length(); i++)
-    {
-        string temp = s.substr(i,i);
-        cout << temp << endl;
+    int start= 0;
+    int end = 0;
+    int max = 0;
+
+    unorder_map<char,int> charSet;
+
+    while(end < s.size()){
+        if(charSet.find(s[end]) != charSet.end()){
+            // repeated char, update max
+            max = max(max,end-start);
+            // remove chars from set up to repeated char
+            while(s[start] != s[end]){
+                charSet.erase(s[start]);
+                start++;
+            }
+            start++;
+        }else{
+            charSet.insert(s[end]);
+            end++;
+        }
     }
-        
-    return 0;
+
+    return max;
 
 }
 

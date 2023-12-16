@@ -1,12 +1,12 @@
-ECHO STARTS
+echo START
 
-ECHO COMPILE
+echo COMPILE
 g++ solution.cpp -o RUN -std=c++11
 
-ECHO RUN
+echo RUN
 ./RUN
 
-ECHO REMOVE
+echo REMOVE
 rm RUN
 
-ECHO TERMINATED
+echo TERMINATED
